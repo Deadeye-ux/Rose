@@ -1,0 +1,99 @@
+.greeting-container {
+  position: relative;
+  min-height: 100vh;
+  background: url('/public/rose-bg.jpg') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.vintage-card {
+  background: #fff5e6 url('/public/paper1.jpg') repeat;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #e0d0c0;
+  transform: rotate(-1deg);
+  z-index: 2;
+}
+
+.vintage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, transparent 50%, rgba(0,0,0,0.03) 100%);
+  pointer-events: none;
+}
+
+.vintage-title {
+  font-family: 'Dancing Script', cursive;
+  color: #800000;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.handwritten-text {
+  font-family: 'Caveat', cursive;
+  color: #3d2b1f;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.handwritten-text p {
+  margin-bottom: 1.5rem;
+}
+
+.vintage-list {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+.vintage-list li {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.vintage-list li::before {
+  content: '✽';
+  color: #800000;
+  position: absolute;
+  left: -1.5rem;
+}
+
+.vintage-signature {
+  margin-top: 3rem;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.signature-name {
+  font-family: 'Dancing Script', cursive;
+  color: #800000;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+/* Add coffee stains effect */
+.vintage-card::after {
+  content: '';
+  position: absolute;
+  background: rgba(150, 100, 50, 0.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 20%;
+  left: 15%;
+  filter: blur(2px);
+}

@@ -1,0 +1,13 @@
+.rose-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -80px;
+}
+
+.blooming-rose {
+  width: 500px;
+  height: 500px;
+  filter: drop-shadow(0 0 10px rgba(255,0,102,0.2));
+}

@@ -1,0 +1,23 @@
+.floating-heart {
+    position: fixed;
+    color: #ff4081;
+    opacity: 0;
+    z-index: 1;
+    animation: float 8s infinite linear;
+    pointer-events: none;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(110vh) translateX(-10vw);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(60vh) translateX(10vw);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-10vh) translateX(20vw);
+      opacity: 0;
+    }
+  }
