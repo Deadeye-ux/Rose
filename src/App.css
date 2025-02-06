@@ -1,0 +1,83 @@
+.floating-heart {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: #ff4081;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
+  opacity: 0;
+  z-index: 1;
+  animation: float 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    transform: 
+      translate(calc(-100vw * var(--x)), 120vh)
+      scale(0.5)
+      rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: 
+      translate(calc(50vw * var(--y)), 60vh)
+      scale(1)
+      rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: 
+      translate(calc(100vw * var(--x)), -20vh)
+      scale(0.3)
+      rotate(360deg);
+    opacity: 0;
+  }
+}
+/* Add these at the bottom */
+@media (max-width: 768px) {
+  .page-heading {
+    font-size: 2.5rem;
+    top: 5%;
+  }
+
+  .blooming-rose {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  .normal-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    top: 75%;
+  }
+
+  .vintage-card {
+    width: 95% !important;
+    padding: 1rem !important;
+  }
+
+  .greeting-text h2 {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-heading {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+
+  .blooming-rose {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  .normal-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .floating-heart {
+    font-size: 20px !important;
+  }
+}
